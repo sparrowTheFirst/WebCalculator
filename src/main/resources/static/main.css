@@ -1,0 +1,26 @@
+#calc {
+    display: center;
+    width: 500px;
+    margin: 50px auto;
+}
+.col {
+    width: 50%;
+}
+
+.bg-light.bttn {
+    width: auto;
+    min-width: 200px;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.bttn {
+    margin: 5% auto;
+}
+
+div#opt.row input.bttn {
+    font-size: 30px;
+}

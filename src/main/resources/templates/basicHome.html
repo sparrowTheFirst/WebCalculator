@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:include="navbar :: head">
+    <meta charset="UTF-8"/>
+    <title>basicHome</title>
+</head>
+<body>
+
+<div th:include="navbar :: body"></div>
+
+<div id="calc" class="bg-dark rounded">
+    <div class="row">
+        <div class="bg-light bttn">
+            <h2 class="bttn text-center">Result:</h2>
+        </div>
+        <div class="bg-light bttn">
+            <h2 class="bttn text-center"><p th:text="${result}"></p></h2>
+        </div>
+    </div>
+
+    <form th:action="@{/basic/}" method="post" th:object="${variable}">
+        <div class="row">
+            <div class="bg-light bttn">
+                <h2 class="bttn text-center">A:</h2>
+            </div>
+
+            <input class="bttn  text-center" type="number" placeholder="0" th:field="*{a}"/>
+
+        </div>
+
+        <div class="row">
+            <div class="bg-light bttn">
+                <h2 class="bttn text-center">B:</h2>
+            </div>
+
+            <input class="bttn text-center" type="number" placeholder="0" th:field="*{b}"/>
+
+        </div>
+
+        <div class="row" id="opt">
+            <input class="bttn" type="submit" name="add" value="+"/>
+            <input class="bttn" type="submit" name="sub" value="-"/>
+            <input class="bttn" type="submit" name="mul" value="*"/>
+            <input class="bttn" type="submit" name="div" value="/"/>
+        </div>
+    </form>
+
+</div>
+
+</body>
+</html>
